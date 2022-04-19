@@ -1,0 +1,14 @@
+image: node:12.20.1
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - yarn install
+    - CI=false yarn prepare
+    - yarn publish
+    - echo "-- build completed succesfully"
+  only:
+    - master

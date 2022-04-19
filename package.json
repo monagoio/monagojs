@@ -1,0 +1,31 @@
+{
+  "name": "@monagoio/monagojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {},
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "barreler": "^0.0.5",
+    "rimraf": "^3.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "tsc": "rm -rf dist/ && tsc",
+    "ts": "rm -rf dist/ && tsc -w",
+    "dev": "nodemon dist/app.js",
+    "clean": "rimraf dist",
+    "start": "ts-node-dev --inspect=9227 src/app.ts --no-cache",
+    "tscBuild": "tsc --build",
+    "index": "barreler -m multifile-index ./src && rm index.ts",
+    "build": "npm run clean && npm run index  && npm run tscBuild",
+    "prepare": "npm run build"
+  },
+  "author": "",
+  "license": "ISC"
+}
