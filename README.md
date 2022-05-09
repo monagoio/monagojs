@@ -1,8 +1,8 @@
 # MonagoJS
 
 [![npm version](https://img.shields.io/npm/v/@monagoio/monagojs.svg?style=flat-square)](https://www.npmjs.org/package/@monagoio/monagojs)
-[![CDNJS](https://img.shields.io/cdnjs/v/@monagoio/monagojs.svg?style=flat-square)](https://cdnjs.com/libraries/@monagoio/monagojs)
-![Build status](https://github.com/monagoio/monagojs/actions/workflows/ci.yml/badge.svg)
+<!-- [![CDNJS](https://img.shields.io/cdnjs/v/@monagoio/monagojs.svg?style=flat-square)](https://cdnjs.com/libraries/@monagoio/monagojs)
+![Build status](https://github.com/monagoio/monagojs/actions/workflows/ci.yml/badge.svg) -->
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/monagoio/monagojs) 
 [![code coverage](https://img.shields.io/coveralls/@monagoio/monagojs.svg?style=flat-square)](https://coveralls.io/r/monagoio/monagojs)
 [![install size](https://packagephobia.now.sh/badge?p=@monagoio/monagojs)](https://packagephobia.now.sh/result?p=@monagoio/monagojs)
