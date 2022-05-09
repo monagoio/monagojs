@@ -7,7 +7,18 @@ export class Monago {
     guest: Guest
     admin: Admin
 
-    constructor(params: IMonagoParams){
+    constructor(params?: IMonagoParams){
+        if (!params){
+            params = {
+                guest: {
+                    serviceUri: ""
+                },
+                admin: {
+                    githubToken: "",
+                    hostUri: config.MONAGO_URI,
+                }
+            }
+        }
         this.guest = new Guest(params.guest ?? {
             serviceUri: ""
         })
