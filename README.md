@@ -4,7 +4,7 @@
 <!-- [![CDNJS](https://img.shields.io/cdnjs/v/@monagoio/monagojs.svg?style=flat-square)](https://cdnjs.com/libraries/@monagoio/monagojs)
 ![Build status](https://github.com/monagoio/monagojs/actions/workflows/ci.yml/badge.svg) -->
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/monagoio/monagojs) 
-[![code coverage](https://img.shields.io/coveralls/@monagoio/monagojs.svg?style=flat-square)](https://coveralls.io/r/monagoio/monagojs)
+[![Coverage Status](https://coveralls.io/repos/github/monagoio/monagojs/badge.svg?branch=master)](https://coveralls.io/github/monagoio/monagojs?branch=master)
 [![install size](https://packagephobia.now.sh/badge?p=@monagoio/monagojs)](https://packagephobia.now.sh/result?p=@monagoio/monagojs)
 [![npm downloads](https://img.shields.io/npm/dm/@monagoio/monagojs.svg?style=flat-square)](https://npm-stat.com/charts.html?package=@monagoio/monagojs)
 [![gitter chat](https://img.shields.io/gitter/room/@monagoio/monagojs.svg?style=flat-square)](https://gitter.im/monagojs)
