@@ -24,7 +24,8 @@
     "tscBuild": "tsc --build",
     "index": "barreler -m multifile-index ./src && rm index.ts",
     "build": "npm run clean && npm run index  && npm run tscBuild",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "ts-node ./src/test/test.ts"
   },
   "author": "",
   "license": "ISC"
