@@ -11,7 +11,7 @@
 [![code helpers](https://www.codetriage.com/monagoio/monagojs/badges/users.svg)](https://www.codetriage.com/monagoio/monagojs)
 [![Known Vulnerabilities](https://snyk.io/test/npm/@monagoio/monagojs/badge.svg)](https://snyk.io/test/npm/@monagoio/monagojs)
 
-SDK for monago platform, help developers to create and consume apis
+SDK for monago platform, help developers to create and consume apis without managing the fullcode and its infrastructure
 
 ## Table of Contents
 
