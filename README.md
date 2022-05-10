@@ -47,25 +47,25 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
 Using npm:
 
 ```bash
-$ npm install axios
+$ npm install @monagoio/monagojs
 ```
 
 Using bower:
 
 ```bash
-$ bower install axios
+$ bower install @monagoio/monagojs
 ```
 
 Using yarn:
 
 ```bash
-$ yarn add axios
+$ yarn add @monagoio/monagojs
 ```
 
 Using pnpm:
 
 ```bash
-$ pnpm add axios
+$ pnpm add @monagoio/monagojs
 ```
 
 
@@ -83,7 +83,7 @@ const monago = new Monago()
 ```
 function createProject({name, description}) {
    monago.admin.project.createProject({name, description})
-    // axios({method POST, headers, host, data: {name, description}})
+    // @monagoio/monagojs({method POST, headers, host, data: {name, description}})
 }
 
 <button onClick={createProject}> Create Project Todo </button>
