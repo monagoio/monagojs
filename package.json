@@ -1,18 +1,37 @@
 {
   "name": "@monagoio/monagojs",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "SDK for monago platform, help developers to create and consume apis",
+  "keywords": [
+    "api",
+    "cms",
+    "rest",
+    "dashboard",
+    "erp",
+    "api-generator",
+    "headless-cms",
+    "monagojs",
+    "mysql",
+    "graphql",
+    "postgres",
+    "mongodb"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
+    "@babel/preset-env": "^7.17.10",
     "axios": "^0.27.2"
   },
   "files": [
     "dist/**/*"
   ],
   "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.5.0",
     "barreler": "^0.0.5",
-    "rimraf": "^3.0.2"
+    "jest": "^28.1.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -27,8 +46,22 @@
     "index": "barreler -m multifile-index ./src && rm index.ts",
     "build": "npm run clean && npm run index  && npm run tscBuild",
     "prepare": "npm run build",
-    "test": "ts-node ./src/test/test.ts"
+    "test": "jest"
   },
-  "author": "",
-  "license": "ISC"
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "/dist/"
+    ]
+  },
+  "homepage": "https://github.com/monagoio/monagojs#readme",
+  "author": "Monago Technology",
+  "bugs": {
+    "url": "https://github.com/monagoio/monagojs/issues",
+    "email": "ibidathoillah@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monagoio/monagojs.git"
+  },
+  "license": "MIT"
 }

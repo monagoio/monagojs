@@ -1,14 +1,10 @@
 import { IAdminCredential } from "../admin";
-import axios from 'axios';
-
-export interface ICreateProject {
-    name: string
-    description: string
-}
+import axios, { AxiosRequestHeaders } from 'axios';
+import { ICreateProject, IDeletePorject } from "./interfaces/project";
 
 export class Project {
     private credential?: IAdminCredential
-    private headers?: any
+    private headers?: AxiosRequestHeaders
 
     constructor(params?: IAdminCredential) {
         this.credential = params
@@ -20,5 +16,9 @@ export class Project {
 
     createProject(params: ICreateProject) {
         return axios({ method: 'post', url: this.credential?.hostUri + '/v1/projects', headers: this.headers, data: params })
+    }
+
+    deleteProject(params: IDeletePorject) {
+        return axios({ method: 'delete', url: this.credential?.hostUri + '/v1/projects' + `/${params.id}`, headers: this.headers, data: params })
     }
 }

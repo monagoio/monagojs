@@ -44,7 +44,6 @@ export class Admin {
 
     private logged() {
         if(this.credential){
-            this.credential.hostUri = this.hostUri
             this.project = new Project(this.credential)
 
         } else {

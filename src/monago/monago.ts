@@ -11,7 +11,10 @@ export class Monago {
         if (!params){
             params = {
                 guest: {
-                    serviceUri: ""
+                    serviceUri: "",
+                    projectName: "",
+                    token: "",
+                    userName: ""
                 },
                 admin: {
                     githubToken: "",
@@ -20,7 +23,10 @@ export class Monago {
             }
         }
         this.guest = new Guest(params.guest ?? {
-            serviceUri: ""
+            serviceUri: "",
+            projectName: "",
+            token: "",
+            userName: ""
         })
 
         this.admin = new Admin(params.admin ?? {

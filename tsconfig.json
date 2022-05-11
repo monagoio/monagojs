@@ -19,6 +19,7 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts",
-    "**/*.test.ts"
+    "**/*.test.ts",
+    "babel.config.js"
   ],
 }
