@@ -18,31 +18,13 @@ For PCI compliance to be maintained, tokenization of apis url info should be don
 
 ## Table of Contents
 
-  - [Features](#features)
-  - [Browser Support](#browser-support)
   - [Installing](#installing)
+  - [Features](#features)
+    - [Usage Guest (Consume APIs)](#usage-as-guest-mode)
+    - [Admin Usage](#admin)
   - [Example](#example)
   - [IAM](#iam)
-
-## Browser Support
-
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
---- | --- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ |
-
-[![Browser Matrix](https://saucelabs.com/open_sauce/build_matrix/oauth-ibidathoillah-3611d.svg)](https://saucelabs.com/u/oauth-ibidathoillah-3611d)
-
-## Features
-### Admin
-- Login with Github and Github access token
-- Make Project
-- Make Model
-- Make Route
-- Setting Project
-
-### Guest
-- Login with email or social media
-- Make data using access and role
+  - [Browser Support](#browser-support)
 
 
 ## Installing
@@ -71,6 +53,34 @@ Using pnpm:
 $ pnpm add @monagoio/monagojs
 ```
 
+## Features
+### Usage as Guest Mode
+```js
+const { Monago } = require('@monagoio/monagojs');
+
+const monagoClient = new Monago({
+  guest: {
+    projectName: "my-project",
+    userName: "my-name",
+    token: "***************"
+  }
+});
+```
+**Guest Mode** is used as a client that has access to fires that have been created through the monago application
+> - **projectName** : name of project created in monago platforms
+> - **userName** : username registered
+> - **token** : token of project
+
+### Admin
+- Login with Github and Github access token
+- Make Project
+- Make Model
+- Make Route
+- Setting Project
+
+### Guest
+- Login with email or social media
+- Make data using access and role
 
 ## Example
 
@@ -153,3 +163,11 @@ monago.guest.apis.post({
 
 ## IAM
 Roles role: {restricted , public, admin,  (++role)
+
+
+## Browser Support
+
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) | [![Browser Matrix](https://saucelabs.com/open_sauce/build_matrix/oauth-ibidathoillah-3611d.svg)](https://saucelabs.com/u/oauth-ibidathoillah-3611d) |
+--- | --- | --- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11 ✔ | Tested ✔ |
+
