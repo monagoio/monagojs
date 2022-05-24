@@ -26,6 +26,13 @@ export interface ILoginWithToken {
 
 export type LoginParams<T> = ((...args: any[]) => any) | ILoginWithUsername | ILoginWithEmail | ILoginWithToken
 
+export interface RegisterParams {
+    full_name:string
+    username: string
+    email: string
+    password: string
+}
+
 
 export class MonagoAdmin {
 
@@ -70,6 +77,22 @@ export class MonagoAdmin {
         } else if (params && typeof params == "object" && "token" in params) {
 
             throw Error("Login with token currently not supported")
+        }
+    }
+
+    async register(params?: RegisterParams) {
+
+        if (typeof window !== "undefined") {
+
+            this.login(params)
+
+        } else if (params && typeof params == "object" && "password" in params) {
+
+            return axios({ method: 'post', url: this.hostUri + "/v1/user/register", data: params }).then(data => data).catch(err => err.response)
+
+        } else if (params && typeof params == "object" && "token" in params) {
+
+            throw Error("Register with token currently not supported")
         }
     }
 
