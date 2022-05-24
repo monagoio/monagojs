@@ -1,4 +1,4 @@
-import axios, { AxiosRequestHeaders } from "axios"
+import axios, { AxiosRequestHeaders, AxiosResponse } from "axios"
 import { IGuestCredential } from "../guest"
 
 interface RequestData {
@@ -6,6 +6,19 @@ interface RequestData {
     params?: any
     url: string
     version?: number
+}
+
+export interface LoginParams {
+    username?: string
+    password?: string
+    grant_type?: string
+}
+
+export interface RegisterParams {
+    username?: string
+    email?: string
+    password?: string
+    grant_type?: string
 }
 
 export class GuestAPI {
@@ -25,53 +38,73 @@ export class GuestAPI {
         return this.credential?.hostUri + '/v' + (version ?? 1) + url
     }
 
-    post(data: RequestData) {
+    async login(data: LoginParams): Promise<AxiosResponse> {
+
+        return axios({
+            method: 'post',
+            url: this.url("/auth/login", 1),
+            headers: this.headers,
+            data: data,
+        }).then(data => data).catch(err => err.response)
+    }
+
+    async register(data: RegisterParams): Promise<AxiosResponse> {
+
+        return axios({
+            method: 'post',
+            url: this.url("/auth/login", 1),
+            headers: this.headers,
+            data: data,
+        }).then(data => data).catch(err => err.response)
+    }
+
+    async post(data: RequestData): Promise<AxiosResponse> {
         return axios({
             method: 'post',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        })
+        }).then(data => data).catch(err => err.response)
     }
 
-    put(data: RequestData) {
+    async put(data: RequestData): Promise<AxiosResponse> {
         return axios({
             method: 'put',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        })
+        }).then(data => data).catch(err => err.response)
     }
 
-    patch(data: RequestData) {
+    async patch(data: RequestData): Promise<AxiosResponse> {
         return axios({
             method: 'patch',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        })
+        }).then(data => data).catch(err => err.response)
     }
 
-    delete(data: RequestData) {
+    async delete(data: RequestData): Promise<AxiosResponse> {
         return axios({
             method: 'delete',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        })
+        }).then(data => data).catch(err => err.response)
     }
 
-    get(data: RequestData) {
+    async get(data: RequestData): Promise<AxiosResponse> {
         return axios({
             method: 'get',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        })
+        }).then(data => data).catch(err => err.response)
     }
 }

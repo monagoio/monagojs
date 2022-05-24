@@ -17,7 +17,7 @@ export class Monago {
                     userName: ""
                 },
                 admin: {
-                    githubToken: "",
+                    token: "",
                     hostUri: config.MONAGO_URI,
                 }
             }
@@ -30,7 +30,7 @@ export class Monago {
         })
 
         this.admin = new Admin(params.admin ?? {
-            githubToken: "",
+            token: "",
             hostUri: config.MONAGO_URI,
         })
     }

@@ -1,3 +1,3 @@
 export const config = {
-    MONAGO_URI : "api.monago.space",
+    MONAGO_URI : "https://api.monago.io",
 }

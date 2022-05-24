@@ -7,6 +7,10 @@ export class Project {
     private headers?: AxiosRequestHeaders
 
     constructor(params?: IAdminCredential) {
+        this.setAccess(params)
+    }
+
+    private setAccess(params?: IAdminCredential) {
         this.credential = params
         this.headers = {
             'Authorization': `${this.credential?.authorization} ${this.credential?.token}`,
@@ -14,11 +18,11 @@ export class Project {
         }
     }
 
-    createProject(params: ICreateProject) {
+    create(params: ICreateProject) {
         return axios({ method: 'post', url: this.credential?.hostUri + '/v1/projects', headers: this.headers, data: params })
     }
 
-    deleteProject(params: IDeletePorject) {
+    delete(params: IDeletePorject) {
         return axios({ method: 'delete', url: this.credential?.hostUri + '/v1/projects' + `/${params.id}`, headers: this.headers, data: params })
     }
 }
