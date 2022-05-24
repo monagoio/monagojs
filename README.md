@@ -7,6 +7,7 @@
 [![gitter chat](https://img.shields.io/gitter/room/@monagoio/monagojs.svg?style=flat-square)](https://gitter.im/monagojs)
 [![code helpers](https://www.codetriage.com/monagoio/monagojs/badges/users.svg)](https://www.codetriage.com/monagoio/monagojs)
 [![Known Vulnerabilities](https://snyk.io/test/npm/@monagoio/monagojs/badge.svg)](https://snyk.io/test/npm/@monagoio/monagojs)
+[![Rate this package](https://badges.openbase.com/js/rating/@monagoio/monagojs.svg?token=gS57B1xyG2G5NoJdwRtJdZutn4ptWW8toE05iyQIj5E=)](https://openbase.com/js/@monagoio/monagojs?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/monagoio/monagojs)
 
 SDK for monago platform, help developers to create and consume apis without managing the fullcode and its infrastructure
