@@ -14,7 +14,7 @@ export interface ClientLoginParams {
     grant_type?: string
 }
 
-export interface RegisterParams {
+export interface ClientRegisterParams {
     username?: string
     email?: string
     password?: string
@@ -48,7 +48,7 @@ export class GuestAPI {
         }).then(data => data).catch(err => err.response)
     }
 
-    async register(data: RegisterParams): Promise<AxiosResponse> {
+    async register(data: ClientRegisterParams): Promise<AxiosResponse> {
 
         return axios({
             method: 'post',

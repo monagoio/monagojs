@@ -40,3 +40,5 @@ lerna-debug.log*
 private.pem
 tsconfig.json
 /src
+/test
+/dist/test
