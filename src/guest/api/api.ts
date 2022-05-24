@@ -8,7 +8,7 @@ interface RequestData {
     version?: number
 }
 
-export interface LoginParams {
+export interface ClientLoginParams {
     username?: string
     password?: string
     grant_type?: string
@@ -38,7 +38,7 @@ export class GuestAPI {
         return this.credential?.hostUri + '/v' + (version ?? 1) + url
     }
 
-    async login(data: LoginParams): Promise<AxiosResponse> {
+    async login(data: ClientLoginParams): Promise<AxiosResponse> {
 
         return axios({
             method: 'post',

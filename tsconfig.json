@@ -17,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
   },
   "exclude": [
+    "coverage",
     "node_modules",
     "**/*.spec.ts",
     "**/*.test.ts",

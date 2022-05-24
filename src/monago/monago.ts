@@ -1,11 +1,11 @@
-import { Admin } from "../admin/admin";
+import { MonagoAdmin } from "../admin/admin";
 import { config } from "../config/config";
 import { Guest } from "../guest/guest";
 import { IMonagoParams } from "./monagoInterface";
 
 export class Monago {
     guest: Guest
-    admin: Admin
+    admin: MonagoAdmin
 
     constructor(params?: IMonagoParams){
         if (!params){
@@ -29,7 +29,7 @@ export class Monago {
             userName: ""
         })
 
-        this.admin = new Admin(params.admin ?? {
+        this.admin = new MonagoAdmin(params.admin ?? {
             token: "",
             hostUri: config.MONAGO_URI,
         })
