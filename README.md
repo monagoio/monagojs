@@ -36,22 +36,10 @@ Using npm:
 $ npm install @monagoio/monagojs
 ```
 
-Using bower:
-
-```bash
-$ bower install @monagoio/monagojs
-```
-
 Using yarn:
 
 ```bash
 $ yarn add @monagoio/monagojs
-```
-
-Using pnpm:
-
-```bash
-$ pnpm add @monagoio/monagojs
 ```
 
 ## Features
