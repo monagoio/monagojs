@@ -12,8 +12,6 @@
 
 SDK for monago platform, help developers to create and consume apis without managing the fullcode and its infrastructure
 
-[![NPM](https://nodei.co/npm/@monagoio/monagojs.png)](https://nodei.co/npm/@monagoio/monagojs/)
-
 **Note**: This library is only meant for usage from server-side with Monago secret API key.
 For PCI compliance to be maintained, tokenization of apis url info should be done on client side with monago dashboard.
 
