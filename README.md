@@ -1,4 +1,4 @@
-# MonagoJS - Fast And Costumized APIs Library From Monago.io
+# MonagoJS - Fast And Customized APIs Library From Monago.io
 
 [![Bugs](https://sonarqube.monago.io/api/project_badges/measure?project=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx&metric=bugs&token=ca1d4cb7900cd7b5427000373f3e562b0d8d60ad)](https://sonarqube.monago.io/dashboard?id=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx)
 [![Code Smells](https://sonarqube.monago.io/api/project_badges/measure?project=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx&metric=code_smells&token=ca1d4cb7900cd7b5427000373f3e562b0d8d60ad)](https://sonarqube.monago.io/dashboard?id=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx)
