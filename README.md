@@ -11,7 +11,6 @@
 [![Security Rating](https://sonarqube.monago.io/api/project_badges/measure?project=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx&metric=security_rating&token=ca1d4cb7900cd7b5427000373f3e562b0d8d60ad)](https://sonarqube.monago.io/dashboard?id=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx)
 [![Technical Debt](https://sonarqube.monago.io/api/project_badges/measure?project=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx&metric=sqale_index&token=ca1d4cb7900cd7b5427000373f3e562b0d8d60ad)](https://sonarqube.monago.io/dashboard?id=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx)
 [![Vulnerabilities](https://sonarqube.monago.io/api/project_badges/measure?project=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx&metric=vulnerabilities&token=ca1d4cb7900cd7b5427000373f3e562b0d8d60ad)](https://sonarqube.monago.io/dashboard?id=monagoio_monagojs_AYK1U5X5gSsHaZNf2KXx)
-
 [![npm version](https://img.shields.io/npm/v/@monagoio/monagojs.svg?style=flat-square)](https://www.npmjs.org/package/@monagoio/monagojs) 
 [![codecov](https://codecov.io/gh/monagoio/monagojs/branch/master/graph/badge.svg?token=J4RJ7WTMH3)](https://codecov.io/gh/monagoio/monagojs)
 [![install size](https://packagephobia.now.sh/badge?p=@monagoio/monagojs)](https://packagephobia.now.sh/result?p=@monagoio/monagojs)
