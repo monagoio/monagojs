@@ -1,6 +1,6 @@
 import axios from "axios";
 import { config } from "../config/config";
-import { IAdminParams } from "./adminInterface";
+import { IAdminParams } from "./admin.interface";
 import { Project } from "./project/project";
 
 export interface IAdminCredential {
@@ -40,7 +40,7 @@ export class MonagoAdmin {
     public project?: Project
 
     constructor(params: IAdminParams) {
-        this.hostUri = params.hostUri ?? config.MONAGO_URI
+        this.hostUri = params.hostUri ?? config.MONAGO_ADMIN_URI
         this.logged({ authorization: "Bearer", hostUri: this.hostUri, token: params.token })
     }
 

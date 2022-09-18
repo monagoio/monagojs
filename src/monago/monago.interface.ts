@@ -1,5 +1,5 @@
-import { IAdminParams } from "../admin/adminInterface";
-import { IGuestParams } from "../guest/guestInterface";
+import { IAdminParams } from "../admin/admin.interface";
+import { IGuestParams } from "../guest/guest.interface";
 
 export interface IMonagoParams {
     admin?: IAdminParams,
