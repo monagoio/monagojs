@@ -1,2 +1,2 @@
-export { expenses } from './mocks/expenses';
 export * from './config';
+export * from './mocks';

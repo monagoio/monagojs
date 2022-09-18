@@ -159,7 +159,7 @@ monago.guest.apis.post({
 ```
 
 
-## IAM
+## RBAC
 Roles role: {restricted , public, admin,  (++role)
 
 

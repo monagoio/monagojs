@@ -1,6 +1,6 @@
 {
   "name": "@monagoio/monagojs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "SDK for monago platform, help developers to create and consume apis",
   "keywords": [
     "api",
