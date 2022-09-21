@@ -158,6 +158,39 @@ monago.guest.apis.post({
 <button onClick={createTodo}> Add Todo </button>
 ```
 
+#### Read Todo
+```
+const client = new MonagoClient({
+    secretKey: "***"
+})
+
+client.get({ url: "/todos/625d2cb5e52cd20414b36a2e" })
+
+```
+
+#### Update Todo
+```
+const client = new MonagoClient({
+  secretKey: "***"
+})
+
+client.put({ url: "/todos/625d2cb5e52cd20414b36a2e", data: {
+    "name": "[Postponed] Build an app",
+    "description": "Awesome apps ready to release",
+    "date": "2022-06-18T08:51:52.031Z"
+}})
+
+```
+
+#### Delete Todo
+```
+const client = new MonagoClient({
+  secretKey: "***"
+})
+
+client.delete({ url: "/todos/625d2cb5e52cd20414b36a2e" })
+
+```
 
 ## RBAC
 Roles role: {restricted , public, admin,  (++role)

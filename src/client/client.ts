@@ -12,7 +12,7 @@ export class MonagoClient extends GuestAPI {
         }
 
         super({
-            authorization: "",
+            authorization:  "Bearer",
             hostUri: params.serviceUri ?? config.MONAGO_CLIENT_URI + "/"+ userName + "/" + projectName,
             token: params.secretKey
         })

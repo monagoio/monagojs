@@ -17,7 +17,7 @@ export class Guest {
 
     constructor(params: IGuestParams) {
         this.api = new GuestAPI({
-            authorization: "",
+            authorization:  "Bearer",
             hostUri: params.serviceUri ?? config.MONAGO_CLIENT_URI+ "/"+ params.userName + "/" + params.projectName,
             token: "",
         })
