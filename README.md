@@ -33,7 +33,7 @@ For PCI compliance to be maintained, tokenization of apis url info should be don
     - [Usage Guest (Consume APIs)](#usage-as-guest-mode)
     - [Admin Usage](#admin)
   - [Example](#example)
-  - [IAM](#iam)
+  - [RBCA](#rbac)
   - [Browser Support](#browser-support)
 
 
