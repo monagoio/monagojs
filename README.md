@@ -70,9 +70,14 @@ client.post({ url: "/todos", data: {
 To use **read all** function, you can write the code such as below.
 
 ``` js
-client.get({ url: "/todos/:id" })
+client.get({ url: "/todos", params: {
+    "page": 1,
+    "limit": 10,
+    "orderby": "date"
+}})
 
 ```
+But, it depends whether you check the pagination option when you create the data model. If you uncheck the pagination, you can delete the params.
 
 #### Read Detail
 To use **read** function, you can write the code such as below.
