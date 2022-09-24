@@ -10,11 +10,6 @@ SDK for monago platform, help developers to create and consume apis without mana
 **Note**: This library is only meant for usage from server-side with Monago secret API key.
 For PCI compliance to be maintained, tokenization of apis url info should be done on client side with monago dashboard.
 
-## Table of Contents
-
-  - [Usage](#usage)
-  - [How To Use](#howtouse)
-
 ## Usage
 
 First, you need to install the library
@@ -71,11 +66,19 @@ client.post({ url: "/todos", data: {
 
 ```
 
-#### Read 
-To use **read** function, you can pass your data such as below.
+#### Read All
+To use **read all** function, you can write the code such as below.
 
 ``` js
-client.get({ url: "/todos/:uuid" })
+client.get({ url: "/todos/:id" })
+
+```
+
+#### Read Detail
+To use **read** function, you can write the code such as below.
+
+``` js
+client.get({ url: "/todos/:id" })
 
 ```
 
@@ -83,7 +86,7 @@ client.get({ url: "/todos/:uuid" })
 To use **update** function, you can pass your data such as below.
 
 ```js
-client.put({ url: "/todos/:uuid", data: {
+client.put({ url: "/todos/:id", data: {
     "name": "[Postponed] Build an app",
     "description": "Awesome apps ready to release",
     "date": "2022-06-18T08:51:52.031Z"
@@ -92,12 +95,11 @@ client.put({ url: "/todos/:uuid", data: {
 ```
 
 #### Delete 
-To use **delete** function, you can pass your data such as below.
+To use **delete** function, you can write the code such as below.
 
 ``` js
-client.delete({ url: "/todos/:uuid" })
+client.delete({ url: "/todos/:id" })
 
 ```
 
-You can check the url through Monago dashboard > project > endpoint, then the uuid through your ownn project documentation through the Monago dashboard.
-
+Remember, the URL depends on the model that you've defined.
