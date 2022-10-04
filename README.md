@@ -42,7 +42,7 @@ There are basic usages for developers to leverage Monago SDK such as register, l
 To use **register** function, you can pass your data such as below.
 
 ``` js
-client.register({ email: "monago@example.com",username : "monago", password: "pass" })
+client.register({ email: "monago@example.com", name : "monago", password: "pass" })
 
 ```
 
@@ -50,7 +50,7 @@ client.register({ email: "monago@example.com",username : "monago", password: "pa
 To use **login** function, you can pass your data such as below.
 
 ``` js
-client.login({ username : "monago", password: "pass" })
+client.login({ email : "monago", password: "pass" })
 
 ```
 
