@@ -55,7 +55,6 @@ export class MonagoAdmin {
             let child = window.open(this.hostUri + "/v1/github/login", '_blank', 'location=yes,height=970,width=600,scrollbars=yes,status=yes')
             let interval = setInterval(() => {
                 child?.postMessage({ message: "requestResult" }, "*")
-                console.log("waiting for response")
             }, 1000)
 
             eventer(messageEvent, (e: any) => {

@@ -1,0 +1,1 @@
+export const COOKIE_HEADER_KEY = "__HEADER"

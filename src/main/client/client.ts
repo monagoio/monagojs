@@ -11,7 +11,7 @@ export class MonagoClient extends GuestAPI {
         }
         const [userName, projectName] = Buffer.from(params.secretKey, "base64").toString().split(":")
         if (!userName) {
-            throw new Error("Invalid token")
+            throw new Error("Invalid secretKey, readmore: https://docs.monago.io")
         }
 
         super({

@@ -1,6 +1,9 @@
+import { config } from './../../../../config/config';
 import { DEFAULT_API_VERSION } from './../const/version';
 import axios, { AxiosRequestHeaders, AxiosResponse } from "axios"
 import { IGuestCredential } from "../guest"
+import { cookies } from '../../../../shared/cookie';
+import { COOKIE_HEADER_KEY } from '../const/cookies';
 
 interface RequestData {
     data?: any
@@ -28,7 +31,19 @@ export interface ClientRegisterParams {
 export class GuestAPI {
 
     private credential?: IGuestCredential
-    private headers?: AxiosRequestHeaders
+
+    set headers(header: AxiosRequestHeaders) {
+        cookies.setCookie(
+            COOKIE_HEADER_KEY,
+            JSON.stringify(header),
+            config.MONAGO_PRIVATE_SESSION_EXP,
+        )
+    }
+    get headers(): AxiosRequestHeaders {
+        return JSON.parse(cookies.getCookie(
+            COOKIE_HEADER_KEY
+        ))
+    }
 
     constructor(params?: IGuestCredential) {
         this.credential = params
@@ -59,8 +74,7 @@ export class GuestAPI {
                 ...(res.data.data)
             }
             this.setHeader(newcredential)
-            console.log(newcredential, this.headers)
-            return data
+            return res
         }).catch(err => err.response)
     }
 
@@ -75,7 +89,6 @@ export class GuestAPI {
     }
 
     async post(data: RequestData): Promise<AxiosResponse> {
-        console.log(this.headers)
         return axios({
             method: 'post',
             url: this.url(data.url, data.version),

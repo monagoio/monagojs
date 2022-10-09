@@ -1,6 +1,6 @@
 {
   "name": "@monagoio/monagojs",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "SDK for monago platform, help developers to create and consume apis",
   "keywords": [
     "api",
@@ -32,6 +32,7 @@
     "barreler": "^0.0.5",
     "codecov": "^3.8.3",
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^29.1.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.2",
     "typescript": "^4.6.4"
@@ -57,9 +58,11 @@
       "json",
       "html"
     ],
+    "testEnvironment": "jsdom",
     "modulePathIgnorePatterns": [
       "/dist/"
-    ]
+    ],
+    "testTimeout": 60000
   },
   "homepage": "https://github.com/monagoio/monagojs#readme",
   "author": "Monago Technology",
