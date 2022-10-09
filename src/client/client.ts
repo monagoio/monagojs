@@ -1,6 +1,6 @@
 import { config } from "../config/config";
 import { GuestAPI } from "../guest";
-import { IClientParams } from "./clientInterface";
+import { IClientParams } from "./client.interface";
 
 export class MonagoClient extends GuestAPI {
 
@@ -12,8 +12,8 @@ export class MonagoClient extends GuestAPI {
         }
 
         super({
-            authorization: "",
-            hostUri: params.serviceUri ?? config.MONAGO_URI + "/app/" + userName + "/" + projectName,
+            authorization:  "Bearer",
+            hostUri: params.serviceUri ?? config.MONAGO_CLIENT_URI + "/"+ userName + "/" + projectName,
             token: params.secretKey
         })
     }

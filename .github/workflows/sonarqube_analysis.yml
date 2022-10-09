@@ -1,11 +1,11 @@
-name: Build
+name: SonarQube Analysis
 on:
   push:
     branches:
       - master # or the name of your main branch
 jobs:
-  build:
-    name: Build
+  start_analysis:
+    name: Start Analysis
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -1,5 +1,5 @@
 import { MonagoClient } from "../../client/client";
 
 export const client = new MonagoClient({
-    secretKey: "c2FjOmZpbmFuY2VtYW5hZ2VtZW50OnRlc3Q=="
+    secretKey: "aHVzZWluZHJhOmxhbmRpbmctcGFnZTokMmEkMDYkQWoxLy8zd0VCRmJ5WjV6TWswODNZT3p6Uk9TdkpHaVlKa3Ixa29Sd3puTmk3LjY5SDVkb2E="
 })

@@ -1,7 +1,7 @@
 import { MonagoAdmin } from "../admin/admin";
 import { config } from "../config/config";
 import { Guest } from "../guest/guest";
-import { IMonagoParams } from "./monagoInterface";
+import { IMonagoParams } from "./monago.interface";
 
 export class Monago {
     guest: Guest
@@ -18,7 +18,7 @@ export class Monago {
                 },
                 admin: {
                     token: "",
-                    hostUri: config.MONAGO_URI,
+                    hostUri: config.MONAGO_ADMIN_URI,
                 }
             }
         }
@@ -31,7 +31,7 @@ export class Monago {
 
         this.admin = new MonagoAdmin(params.admin ?? {
             token: "",
-            hostUri: config.MONAGO_URI,
+            hostUri: config.MONAGO_ADMIN_URI,
         })
     }
 

@@ -59,6 +59,7 @@ export class GuestAPI {
     }
 
     async post(data: RequestData): Promise<AxiosResponse> {
+        console.log(this.url(data.url, data.version))
         return axios({
             method: 'post',
             url: this.url(data.url, data.version),

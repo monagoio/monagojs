@@ -1,2 +1,2 @@
 export { MonagoClient } from './client';
-export { IClientParams } from './clientInterface';
+export { IClientParams } from './client.interface';
