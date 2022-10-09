@@ -1,6 +1,6 @@
-import { MonagoAdmin } from "../admin/admin";
+import { MonagoAdmin } from "./role/admin/admin";
 import { config } from "../config/config";
-import { Guest } from "../guest/guest";
+import { Guest } from "./role/guest/guest";
 import { IMonagoParams } from "./monago.interface";
 
 export class Monago {

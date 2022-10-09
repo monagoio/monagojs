@@ -1,5 +1,5 @@
 import axios from "axios";
-import { config } from "../config/config";
+import { config } from "../../../config/config";
 import { IAdminParams } from "./admin.interface";
 import { Project } from "./project/project";
 

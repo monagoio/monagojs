@@ -1,3 +1,4 @@
+import { DEFAULT_API_VERSION } from './../const/version';
 import axios, { AxiosRequestHeaders, AxiosResponse } from "axios"
 import { IGuestCredential } from "../guest"
 
@@ -9,16 +10,19 @@ interface RequestData {
 }
 
 export interface ClientLoginParams {
-    username?: string
-    password?: string
-    grant_type?: string
-}
-
-export interface ClientRegisterParams {
-    username?: string
+    name?: string
     email?: string
     password?: string
     grant_type?: string
+    version?: number
+}
+
+export interface ClientRegisterParams {
+    name?: string
+    email?: string
+    password?: string
+    grant_type?: string
+    version?: number
 }
 
 export class GuestAPI {
@@ -28,45 +32,57 @@ export class GuestAPI {
 
     constructor(params?: IGuestCredential) {
         this.credential = params
+        this.setHeader(params)
+    }
+
+    private setHeader(credential?: IGuestCredential) {
         this.headers = {
-            'Authorization': `${this.credential?.authorization} ${this.credential?.token}`,
+            'Authorization': `${credential?.authorization} ${credential?.token}`,
             'Content-Type': 'application/json'
         }
     }
 
     private url(url: string, version?: number) {
-        return this.credential?.hostUri + '/v' + (version ?? 1) + url
+        return this.credential?.hostUri + '/v' + (version ?? DEFAULT_API_VERSION) + url
     }
 
     async login(data: ClientLoginParams): Promise<AxiosResponse> {
 
         return axios({
             method: 'post',
-            url: this.url("/auth/login", 1),
+            url: this.url("/auth/login", data.version),
             headers: this.headers,
             data: data,
-        }).then(data => data).catch(err => err.response)
+        }).then(res => {
+            const newcredential = {
+                ...this.credential,
+                ...(res.data.data)
+            }
+            this.setHeader(newcredential)
+            console.log(newcredential, this.headers)
+            return data
+        }).catch(err => err.response)
     }
 
     async register(data: ClientRegisterParams): Promise<AxiosResponse> {
 
         return axios({
             method: 'post',
-            url: this.url("/auth/login", 1),
+            url: this.url("/auth/register", data.version),
             headers: this.headers,
             data: data,
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 
     async post(data: RequestData): Promise<AxiosResponse> {
-        console.log(this.url(data.url, data.version))
+        console.log(this.headers)
         return axios({
             method: 'post',
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
             params: data.params
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 
     async put(data: RequestData): Promise<AxiosResponse> {
@@ -76,7 +92,7 @@ export class GuestAPI {
             headers: this.headers,
             data: data.data,
             params: data.params
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 
     async patch(data: RequestData): Promise<AxiosResponse> {
@@ -86,7 +102,7 @@ export class GuestAPI {
             headers: this.headers,
             data: data.data,
             params: data.params
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 
     async delete(data: RequestData): Promise<AxiosResponse> {
@@ -96,7 +112,7 @@ export class GuestAPI {
             headers: this.headers,
             data: data.data,
             params: data.params
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 
     async get(data: RequestData): Promise<AxiosResponse> {
@@ -106,6 +122,6 @@ export class GuestAPI {
             headers: this.headers,
             data: data.data,
             params: data.params
-        }).then(data => data).catch(err => err.response)
+        }).then(res => res).catch(err => err.response)
     }
 }

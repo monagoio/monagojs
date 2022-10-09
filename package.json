@@ -1,6 +1,6 @@
 {
   "name": "@monagoio/monagojs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "SDK for monago platform, help developers to create and consume apis",
   "keywords": [
     "api",
@@ -19,7 +19,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.3"
   },
   "files": [
     "dist/**/*"
