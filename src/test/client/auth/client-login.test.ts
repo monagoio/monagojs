@@ -5,7 +5,6 @@ import { expenses } from "../../mocks/expenses";
 /**
  * @jest-environment jsdom
  */
-
 test('it should success when normal client login', async () => {
     const resultLogin = await client.login({ email: "ibidathoillah@gmail.com", password: "pass" })
     expect(resultLogin.status).toBe(200);

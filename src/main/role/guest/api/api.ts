@@ -40,9 +40,15 @@ export class GuestAPI {
         )
     }
     get headers(): AxiosRequestHeaders {
-        return JSON.parse(cookies.getCookie(
+        const cookie_result = cookies.getCookie(
             COOKIE_HEADER_KEY
-        ))
+        )
+        if (typeof cookie_result == 'undefined') {
+            console.error(new Date(), "Cannot find cookies")
+            return {}
+        }
+
+        return JSON.parse(cookie_result)
     }
 
     constructor(params?: IGuestCredential) {

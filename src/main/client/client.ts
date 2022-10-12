@@ -1,5 +1,5 @@
 import { config } from "../../config/config";
-import { GuestAPI } from "../role/guest";
+import { GuestAPI } from "../role/guest/api/api";
 import { IClientParams } from "./client.interface";
 
 export class MonagoClient extends GuestAPI {
