@@ -21,6 +21,7 @@
     "node_modules",
     "**/*.spec.ts",
     "**/*.test.ts",
-    "babel.config.js"
+    "babel.config.js",
+    "test"
   ],
 }
