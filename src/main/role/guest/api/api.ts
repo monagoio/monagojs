@@ -12,6 +12,13 @@ interface RequestData {
     version?: number
 }
 
+interface UploadData {
+    file?: any
+    params?: any
+    url?: string
+    version?: number
+}
+
 export interface ClientLoginParams {
     name?: string
     email?: string
@@ -140,6 +147,23 @@ export class GuestAPI {
             url: this.url(data.url, data.version),
             headers: this.headers,
             data: data.data,
+            params: data.params
+        }).then(res => res).catch(err => err.response)
+    }
+
+
+    async upload(data: UploadData): Promise<AxiosResponse> {
+        let url = data.url || ""
+        if (!data.url) {
+            url = '/assets/images/upload'
+        }
+        const formdata = new FormData();
+        formdata.append('images', data.file);
+        return axios({
+            method: 'post',
+            url: this.url(url, data.version),
+            headers: this.headers,
+            data: formdata,
             params: data.params
         }).then(res => res).catch(err => err.response)
     }
