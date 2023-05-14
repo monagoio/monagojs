@@ -108,3 +108,10 @@ client.delete({ url: "/todos/:id" })
 ```
 
 Remember, the URL depends on the model that you've defined.
+
+#### Upload 
+To use **upload** function, you can write the code such as below.
+
+``` js
+client.upload({ url: "/upload" (optional), file, /folder/nama_file(optional)})
+```
