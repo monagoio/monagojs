@@ -19,7 +19,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^1.6.0"
   },
   "files": [
     "dist/**/*"
